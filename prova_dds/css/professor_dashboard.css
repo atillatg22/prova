@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.logout-button {
+    background-color: #d9534f;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* Estilos para as tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    background-color: #fff;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+table button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+table button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos para as mensagens de atividade */
+table p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    th::before, td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+}
